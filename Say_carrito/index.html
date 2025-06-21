@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Deportiva</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>Tienda Deportiva</h1>
+
+  <div class="productos">
+    <div class="producto" data-id="1" data-nombre="Pelota" data-precio="25">
+      <h3>Pelota $25</h3>
+      <button class="agregar">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-id="2" data-nombre="Tenis" data-precio="50">
+      <h3>Tenis $50</h3>
+      <button class="agregar">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-id="3" data-nombre="Guantes" data-precio="45">
+      <h3>Guantes $45</h3>
+      <button class="agregar">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-id="4" data-nombre="Gorra" data-precio="50">
+      <h3>Gorra $50</h3>
+      <button class="agregar">Agregar al carrito</button>
+    </div>
+
+    <div class="producto" data-id="5" data-nombre="Camiseta Deportiva" data-precio="35">
+      <h3>Camiseta Deportiva $35</h3>
+      <button class="agregar">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <h2>Carrito</h2>
+  <ul id="carrito"></ul>
+
+  <form action="procesar_pedido.php" method="POST" onsubmit="return validarCarrito()">
+    <input type="hidden" name="pedido" id="pedido" />
+    <button type="submit">Confirmar pedido</button>
+  </form>
+
+  <script src="carrito.js"></script>
+</body>
+</html>
